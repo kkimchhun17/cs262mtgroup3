@@ -1,18 +1,16 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="container py-5">
-    
     @if(session('success'))
         <div class="alert alert-success border-0 shadow-sm rounded-3 mb-4">
-            <i class="bi bi-check-circle-fill me-2"></i> {{ session('success') }}
+            <i class="bi bi-balloon-heart-fill"></i>{{ session('success') }}
         </div>
     @endif
     <form method="POST" action="/food/create" enctype="multipart/form-data">
         @csrf
         <div class="row g-5">
             <div class="col-12 col-md-5 col-lg-4">
-                <div class="card border-0 shadow-sm rounded-4 p-4 bg-light h-100 d-flex flex-column justify-content-between align-items-center" style="min-height: 700px;">
+                <div class="card border-0 shadow-sm rounded-4 p-4 bg-light h-100 d-flex flex-column justify-content-between align-items-center" style="min-height: 580px;">
                     <div class="w-100 mb-4 d-flex align-items-center justify-content-center bg-secondary-subtle rounded-4 overflow-hidden" style="height: 240px; min-height: 240px; position: relative;">
                         <div id="preview-placeholder" class="text-center p-3">
                             <i class="bi bi-image fs-2 text-secondary mb-1 d-block"></i>
@@ -54,7 +52,7 @@
                 <div class="w-100">
                     <div class="mb-4">
                         <label id="name" class="form-label text-muted fw-semibold small text-uppercase">Title</label>
-                        <input type="text" class="form-control form-control-lg bg-light border-0 py-3 rounded-3 shadow-sm @error('name') is-invalid @enderror" id="name" name="name" placeholder="food name" value="{{ old('name') }}" required>
+                        <input type="text" class="form-control form-control-lg bg-light border-0 py-3 rounded-3 shadow-sm @error('name') is-invalid @enderror" id="input-name" name="name" placeholder="food name" value="{{ old('name') }}" required>
                         @error('name')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -63,7 +61,7 @@
                     </div>
                     <div class="mb-4">
                         <label id="category" class="form-label text-muted fw-semibold small text-uppercase">Category Type</label>
-                        <select class="form-select form-select-lg bg-light border-0 py-3 rounded-3 shadow-sm @error('category') is-invalid @enderror" id="category" name="category" required>
+                        <select class="form-select form-select-lg bg-light border-0 py-3 rounded-3 shadow-sm @error('category') is-invalid @enderror" id="input-category" name="category" required>
                             <option value="" disabled selected>Choose food category...</option>
                             <option value="Soups" {{ old('category') == 'Soups' ? 'selected' : '' }}>Soups</option>
                             <option value="Stir-Fries" {{ old('category') == 'Stir-Fries' ? 'selected' : '' }}>Stir-Fries</option>
@@ -78,7 +76,7 @@
                     </div>
                     <div class="mb-4">
                         <label id="description" class="form-label text-muted fw-semibold small text-uppercase">Description</label>
-                        <textarea class="form-control bg-light border-0 p-3 rounded-3 shadow-sm @error('description') is-invalid @enderror" id="description" name="description" rows="7" placeholder="description for the food" required>{{ old('description') }}</textarea>
+                        <textarea class="form-control bg-light border-0 p-3 rounded-3 shadow-sm @error('description') is-invalid @enderror" id="input-description" name="description" rows="7" placeholder="description for the food" required>{{ old('description') }}</textarea>
                         @error('description')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -88,7 +86,7 @@
                     <div class="row g-4 mb-4">
                         <div class="col-12 col-sm-5">
                             <label id="difficulty" class="form-label text-muted fw-semibold small text-uppercase">Difficulty</label>
-                            <select class="form-select form-select-lg bg-light border-0 py-3 rounded-3 shadow-sm @error('difficulty') is-invalid @enderror" id="difficulty" name="difficulty" required>
+                            <select class="form-select form-select-lg bg-light border-0 py-3 rounded-3 shadow-sm @error('difficulty') is-invalid @enderror" id="input-difficulty" name="difficulty" required>
                                 <option value="Easy" {{ old('difficulty') == 'Easy' ? 'selected' : '' }}>Easy</option>
                                 <option value="Medium" {{ old('difficulty') == 'Medium' ? 'selected' : '' }}>Medium</option>
                                 <option value="Hard" {{ old('difficulty') == 'Hard' ? 'selected' : '' }}>Hard</option>
@@ -96,12 +94,12 @@
                             @error('difficulty')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
-                                </strong>
+                                </span>
                             @enderror
                         </div>
                         <div class="col-12 col-sm-7">
                             <label id="duration" class="form-label text-muted fw-semibold small text-uppercase">Duration (Minutes)</label>
-                            <input type="number" class="form-control form-control-lg bg-light border-0 py-3 rounded-3 shadow-sm @error('duration') is-invalid @enderror" id="duration" name="duration" placeholder="e.g., 20" min="1" value="{{ old('duration') }}" required>
+                            <input type="number" class="form-control form-control-lg bg-light border-0 py-3 rounded-3 shadow-sm @error('duration') is-invalid @enderror" id="input-duration" name="duration" placeholder="e.g., 20" min="1" value="{{ old('duration') }}" required>
                             @error('duration')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -109,18 +107,17 @@
                             @enderror
                         </div>
                     </div>
-
                 </div>
                 <div class="text-end mt-4">
                     <button type="submit" class="btn btn-dark btn-lg px-5 py-2.5 rounded-pill shadow-sm text-uppercase fs-7 fw-bold tracking-wider">
                         Post Dish
                     </button>
                 </div>
-
             </div>
         </div>
     </form>
 </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('image').addEventListener('change', function(event) {
@@ -142,22 +139,22 @@
                 }
             });
             const inputs = {
-                'name': 'preview-title',
-                'category': 'preview-category',
-                'description': 'preview-description',
-                'difficulty': 'preview-difficulty',
-                'duration': 'preview-duration'
+                'input-name': 'preview-title',
+                'input-category': 'preview-category',
+                'input-description': 'preview-description',
+                'input-difficulty': 'preview-difficulty',
+                'input-duration': 'preview-duration'
             };
             Object.keys(inputs).forEach(inputId => {
                 const inputEl = document.getElementById(inputId);
                 const previewEl = document.getElementById(inputs[inputId]);
                 if (inputEl && previewEl) {
                     const updateValue = () => {
-                        if(inputId === 'duration') {
+                        if(inputId === 'input-duration') {
                             previewEl.innerText = inputEl.value || '0';
-                        } else if (inputId === 'description') {
+                        } else if (inputId === 'input-description') {
                             previewEl.innerText = inputEl.value || 'No description provided yet...';
-                        } else if (inputId === 'category') {
+                        } else if (inputId === 'input-category') {
                             previewEl.innerText = inputEl.value || 'None Chosen';
                         } else {
                             previewEl.innerText = inputEl.value || 'Dish Title';
