@@ -163,6 +163,7 @@
                     };
                     inputEl.addEventListener('input', updateValue);
                     inputEl.addEventListener('change', updateValue);
+                    updateValue();
                 }
             });
         });
