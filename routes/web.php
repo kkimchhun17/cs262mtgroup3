@@ -14,3 +14,39 @@ Route::get('/register', function () {
 Route::get('/dashboard', function () {
     return view('pages.dashboard');
 });
+
+
+
+Route::get('/', function () {
+    return view('pages.home');
+});
+
+Route::get('/dishes', function () {
+    return view('pages.dishes');
+});
+
+Route::get('/soups', function () {
+    return view('pages.soups');
+});
+
+Route::get('/all-food', function () {
+    return view('pages.all-food');
+});
+
+Route::get('/grilled', function () {
+    return view('pages.grilled');
+});
+
+Route::get('/desserts', function () {
+    return view('pages.desserts');
+});
+
+Route::get('/rice-noodles', function () {
+    return view('pages.rice-noodles');
+});
+
+Route::get('/aboutus', function () {
+    return view('pages.aboutus');
+});
+
+

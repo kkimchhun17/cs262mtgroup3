@@ -1,0 +1,39 @@
+/* stylelint-disable @stylistic/selector-list-comma-newline-after */
+
+
+
+
+.food-card {
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.card-img-top {
+  height: 190px;
+  object-fit: cover;
+  background-color: #a3a3a3;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.filter-heading {
+    margin-top: 55px;
+    font-size: 50px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.filter-link {
+  padding: 0.5rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  background-color: #ffffff;
+  color: #5a5a5a;
+  border: 1.5px solid #d4cfc4;
+}
+
+
+
+
+
