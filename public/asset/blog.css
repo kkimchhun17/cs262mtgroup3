@@ -1,8 +1,5 @@
 /* stylelint-disable @stylistic/selector-list-comma-newline-after */
 
-
-
-
 .food-card {
   border-radius: 1rem;
   border: none;
@@ -33,6 +30,46 @@
   border: 1.5px solid #d4cfc4;
 }
 
+:root {
+  --brand-orange: #cd9264; 
+  --bg-placeholder: #dcdcdc; 
+  --text-dark: #1a1a1a;
+  --text-muted: #7f8c8d;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text-dark);
+  background-color: rgb(236, 228, 218);
+}
+
+
+.hero-section {
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.text-title {
+  color: var(--brand-orange);
+}
+
+.btn-browse{
+  background-color: #cd9264;
+  color: #1a1a1a;
+}
+.btn-browse:hover {
+  background-color: #c8c8c8;
+}
+.btn-signup{
+  background-color: #cd9264;
+}
 
 
 
