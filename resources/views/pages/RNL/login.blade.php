@@ -12,7 +12,7 @@
                     <input type="text" class="form-control @error('loginname') is-invalid @enderror" id="loginname" name="loginname" required>
                     @error('loginname')
                         <span class="invalid" role="alert">
-                            <strong>Nope</strong>
+                            <strong class="text-danger">Nope</strong>
                         </span>
                     @enderror
                 </div>
