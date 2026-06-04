@@ -63,10 +63,11 @@
                         <label id="category" class="form-label text-muted fw-semibold small text-uppercase">Category Type</label>
                         <select class="form-select form-select-lg bg-light border-0 py-3 rounded-3 shadow-sm @error('category') is-invalid @enderror" id="input-category" name="category" required>
                             <option value="" disabled selected>Choose food category...</option>
-                            <option value="Soups" {{ old('category') == 'Soups' ? 'selected' : '' }}>Soups</option>
-                            <option value="Stir-Fries" {{ old('category') == 'Stir-Fries' ? 'selected' : '' }}>Stir-Fries</option>
-                            <option value="Curries" {{ old('category') == 'Curries' ? 'selected' : '' }}>Curries</option>
-                            <option value="Desserts" {{ old('category') == 'Desserts' ? 'selected' : '' }}>Desserts</option>
+                            <option value="Rice Dishes" {{ old('category') == 'Rice Dishes' ? 'selected' : '' }}>Rice Dishes</option>
+                            <option value="Noodle Dishes" {{ old('category') == 'Noodle Dishes' ? 'selected' : '' }}>Noodle Dishes</option>
+                            <option value="Soups & Curries" {{ old('category') == 'Soups & Curries' ? 'selected' : '' }}>Soups & Curries</option>
+                            <option value="Grilled & Stir-Fried Dishe" {{ old('category') == 'Grilled & Stir-Fried Dishe' ? 'selected' : '' }}>Grilled & Stir-Fried Dishe</option>
+                            <option value="Desserts & Snacks" {{ old('category') == 'Desserts & Snacks' ? 'selected' : '' }}>Desserts & Snacks</option>
                         </select>
                         @error('category')
                             <span class="invalid-feedback" role="alert">
