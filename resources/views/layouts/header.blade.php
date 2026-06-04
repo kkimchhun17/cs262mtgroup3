@@ -8,6 +8,9 @@
                 <a href="/" class="nav-link  custom-muted text-decoration-none">Home</a>
                 <a href="/dishes" class="nav-link  custom-muted text-decoration-none">Dishes</a>
                 <a href="/aboutus" class="nav-link  custom-muted text-decoration-none">About Us</a>
+                @auth
+                <a href="/dashboard" class="nav-link  custom-muted text-decoration-none">Dashboard</a>
+                @endauth
         </div>
 
         <div class="d-flex align-items-center gap-3">
@@ -20,6 +23,7 @@
 
             <a class="btn   shadow-sm px-3 py-1" href="/login">Log in</a>
             <a class="btn   btn-primary shadow-sm px-3 py-1" href="/register">Sign up</a>
+            @endauth
         </div>
 
            
