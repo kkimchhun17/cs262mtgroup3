@@ -52,4 +52,4 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout']);
 Route::post('/register', [AuthController::class, 'register']);
 
-// please make a route about the dashboard like create post and edit
+// idk post login and logout is not yet done
