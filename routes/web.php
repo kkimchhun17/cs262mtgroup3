@@ -3,9 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 
-Route::get('/', function () {
-    return view('index');
-});
+
 Route::get('/login', function () {
     return view('pages.RNL.login');
 });
@@ -16,5 +14,38 @@ Route::get('/dashboard', function () {
     return view('pages.dashboard');
 });
 
-Route::post('/login', [AuthController::class, 'login']);
-Route::post('/register', [AuthController::class, 'register']);
+
+
+Route::get('/', function () {
+    return view('pages.home');
+});
+
+Route::get('/dishes', function () {
+    return view('pages.dishes');
+});
+
+Route::get('/soups', function () {
+    return view('pages.soups');
+});
+
+Route::get('/all-food', function () {
+    return view('pages.all-food');
+});
+
+Route::get('/grilled', function () {
+    return view('pages.grilled');
+});
+
+Route::get('/desserts', function () {
+    return view('pages.desserts');
+});
+
+Route::get('/rice-noodles', function () {
+    return view('pages.rice-noodles');
+});
+
+Route::get('/aboutus', function () {
+    return view('pages.aboutus');
+});
+
+
