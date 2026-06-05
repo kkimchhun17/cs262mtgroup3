@@ -3,7 +3,7 @@
 @section('content')
 <div class="container d-flex justify-content-center align-items-center" style="min-height: 75vh;">
     <div class="col-md-6 col-lg-4">
-        <div class="card shadow-sm p-4 border-0 bg-light">
+        <div class="card shadow-sm p-4 border-0 bg-light rounded-4">
             <h2 class="text-center mb-4 fw-bold">Registration</h2>
             <form method="POST" action="/register">
                 @csrf
@@ -46,7 +46,7 @@
                     </div>
                 </div>
                 <div class="d-grid gap-2 mt-4">
-                    <button type="submit" class="btn btn-primary btn-lg fs-6">SignUp</button>
+                    <button type="submit" class="btn btn-signup btn-lg fs-6">SignUp</button>
                 </div>
             </form>
         </div>

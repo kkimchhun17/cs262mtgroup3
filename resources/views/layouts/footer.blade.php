@@ -20,10 +20,10 @@
                 <a href="/all-food" class="fw-bold mb-3 text-decoration-none text-black fs-6">Categories</a>
                 
                 <ul class="list-unstyled d-flex flex-column gap-2 small">
-                    <li><a href="soups" class="text-muted text-decoration-none ">Soups </a></li>
-                    <li><a href="/grilled" class="text-muted text-decoration-none ">Grilled</a></li>
+                    <li><a href="soups" class="text-muted text-decoration-none ">Soups & Curries </a></li>
+                    <li><a href="/grilled" class="text-muted text-decoration-none ">Grilled & Stir-Fries</a></li>
                     <li><a href="/rice-noodle" class="text-muted text-decoration-none ">Rice & Noodles</a></li>
-                    <li><a href="/desserts" class="text-muted text-decoration-none ">Desserts</a></li>
+                    <li><a href="/desserts" class="text-muted text-decoration-none ">Desserts & Snacks</a></li>
                 </ul>
             </div>
 
