@@ -13,5 +13,7 @@ class Food extends Model
         'description',
         'category',
         'image_url',
+        'difficulty',
+        'duration'
     ];
 }

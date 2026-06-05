@@ -15,7 +15,7 @@
             Explore authentic recipes or share your own Khmer creations with the world.
          </p>
           
-         <a href="/dishes" class="btn btn-browse shadow-sm">Browse more</a>
+         <a href="/all-food" class="btn btn-browse shadow-sm">Browse more</a>
          
       </div> 
 
