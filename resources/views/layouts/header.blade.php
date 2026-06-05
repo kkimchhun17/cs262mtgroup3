@@ -1,7 +1,7 @@
 <header class="container pt-4 pb-2">
    <nav class="d-flex justify-content-between align-items-sm-center">
          <div>
-            <a class="link-secondary text-decoration-none" href="/">Krorya</a>
+            <a class="link-secondary text-decoration-none" href="/">KRORYA</a>
         </div>
 
         <div class="d-flex gap-5">
