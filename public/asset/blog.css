@@ -26,9 +26,10 @@
   font-size: 0.95rem;
   font-weight: 600;
   transition: all 0.2s ease-in-out;
-  background-color: #ffffff;
+  background-color: #f7f2f2;
   color: #5a5a5a;
   border: 1.5px solid #d4cfc4;
+  border-radius: 15px;
 }
 
 :root {
@@ -41,7 +42,7 @@
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: var(--text-dark);
-  background-color: rgb(236, 228, 218);
+  background-color: rgb(226, 222, 217);
 }
 
 
@@ -71,6 +72,7 @@ body {
 .btn-signup{
   background-color: #cd9264;
 }
+
 
 
 

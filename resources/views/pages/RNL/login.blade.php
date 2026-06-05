@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div class="d-grid gap-2 mt-4">
-                    <button type="submit" class="btn btn-primary btn-lg fs-6">Login</button>
+                    <button type="submit" class="btn btn-signup btn-lg fs-6">Login</button>
                 </div>
             </form>
         </div>
