@@ -6,7 +6,7 @@
 
         <div class="d-flex gap-5">
                 <a href="/" class="link-secondary custom-muted text-decoration-none">Home</a>
-                <a href="/all-food" class="link-secondary custom-muted text-decoration-none">All Food</a>
+                <a href="/all-food" class="link-secondary custom-muted text-decoration-none">Dishes</a>
                 <a href="/aboutus" class="link-secondary custom-muted text-decoration-none">About Us</a>
         </div>
 
