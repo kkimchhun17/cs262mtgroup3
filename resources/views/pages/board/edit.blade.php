@@ -59,8 +59,8 @@
                         <label class="form-label text-muted fw-semibold small text-uppercase">Category Type</label>
                         <select class="form-select form-select-lg bg-light border-0 py-3 rounded-3 shadow-sm @error('category') is-invalid @enderror" id="input-category" name="category" required>
                             <option value="" disabled>Choose food category...</option>
-                            <option value="dish" {{ old('category', $dish->category) == 'dish' ? 'selected' : '' }}>Rice Dishes</option>
-                            <option value="rice-noodles" {{ old('category', $dish->category) == 'rice-noodles' ? 'selected' : '' }}>Noodle Dishes</option>
+
+                            <option value="rice-noodles" {{ old('category', $dish->category) == 'rice-noodles' ? 'selected' : '' }}>Rice & Noodle Dishes</option>
                             <option value="soup" {{ old('category', $dish->category) == 'soup' ? 'selected' : '' }}>Soups & Curries</option>
                             <option value="grilled" {{ old('category', $dish->category) == 'grilled' ? 'selected' : '' }}>Grilled & Stir-Fried Dishes</option>
                             <option value="dessert" {{ old('category', $dish->category) == 'dessert' ? 'selected' : '' }}>Desserts & Snacks</option>
