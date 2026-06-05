@@ -8,9 +8,6 @@
                 <a href="/" class="nav-link custom-muted text-decoration-none">Home</a>
                 <a href="/all-food" class="nav-link custom-muted text-decoration-none">All Food</a>
                 <a href="/aboutus" class="nav-link custom-muted text-decoration-none">About Us</a>
-                @auth
-                <a href="/dashboard" class="nav-link  custom-muted text-decoration-none">Dashboard</a>
-                @endauth
         </div>
 
         <div class="d-flex align-items-center gap-3">

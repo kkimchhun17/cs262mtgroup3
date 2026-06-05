@@ -33,7 +33,7 @@ Route::get('/aboutus', function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
-        return view('pages.dashboard');
+        return view('pages.board.dashboard');
     });
     Route::post('/create-dish', [FoodController::class, 'createDish']);
     Route::get('/edit-dish/{food}', [FoodController::class, 'showEditScreen']);
