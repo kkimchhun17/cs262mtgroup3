@@ -2,7 +2,7 @@
 @section('content')
 <div class="container py-5">
     <h1>Upload New Dish</h1>
-    <form method="POST" action="/food/create" enctype="multipart/form-data">
+    <form method="POST" action="/create-dish" enctype="multipart/form-data">
         @csrf
         <div class="row g-5">
             <div class="col-12 col-md-5 col-lg-4">
@@ -57,11 +57,11 @@
                         <label class="form-label text-muted fw-semibold small text-uppercase">Category Type</label>
                         <select class="form-select form-select-lg bg-light border-0 py-3 rounded-3 shadow-sm @error('category') is-invalid @enderror" id="input-category" name="category" required>
                             <option value="" disabled selected>Choose food category...</option>
-                            <option value="Rice Dishes" {{ old('category') == 'Rice Dishes' ? 'selected' : '' }}>Rice Dishes</option>
-                            <option value="Noodle Dishes" {{ old('category') == 'Noodle Dishes' ? 'selected' : '' }}>Noodle Dishes</option>
-                            <option value="Soups & Curries" {{ old('category') == 'Soups & Curries' ? 'selected' : '' }}>Soups & Curries</option>
-                            <option value="Grilled & Stir-Fried Dishe" {{ old('category') == 'Grilled & Stir-Fried Dishe' ? 'selected' : '' }}>Grilled & Stir-Fried Dishe</option>
-                            <option value="Desserts & Snacks" {{ old('category') == 'Desserts & Snacks' ? 'selected' : '' }}>Desserts & Snacks</option>
+                            <option value="dish" {{ old('category') == 'dish' ? 'selected' : '' }}>Rice Dishes</option>
+                            <option value="rice-noodles" {{ old('category') == 'rice-noodles' ? 'selected' : '' }}>Noodle Dishes</option>
+                            <option value="soup" {{ old('category') == 'soup' ? 'selected' : '' }}>Soups & Curries</option>
+                            <option value="grilled" {{ old('category') == 'grilled' ? 'selected' : '' }}>Grilled & Stir-Fried Dishes</option>
+                            <option value="dessert" {{ old('category') == 'dessert' ? 'selected' : '' }}>Desserts & Snacks</option>
                         </select>
                         @error('category')
                             <span class="invalid-feedback" role="alert">

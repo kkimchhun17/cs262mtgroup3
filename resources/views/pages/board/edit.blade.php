@@ -2,9 +2,8 @@
 @section('content')
 <div class="container py-5">
     <h1>Editing Dish</h1>
-    <form method="POST" action="/food/{{ $dish->id }}" enctype="multipart/form-data">
+    <form method="POST" action="/edit-dish/{{ $dish->id }}" enctype="multipart/form-data">
         @csrf
-        @method('PUT')
         <div class="row g-5">
             <div class="col-12 col-md-5 col-lg-4">
                 <div class="card border-0 shadow-sm rounded-4 p-4 bg-light h-50 d-flex flex-column justify-content-between align-items-center" style="min-height: 580px;">
@@ -60,11 +59,11 @@
                         <label class="form-label text-muted fw-semibold small text-uppercase">Category Type</label>
                         <select class="form-select form-select-lg bg-light border-0 py-3 rounded-3 shadow-sm @error('category') is-invalid @enderror" id="input-category" name="category" required>
                             <option value="" disabled>Choose food category...</option>
-                            <option value="Rice Dishes" {{ old('category', $dish->category) == 'Rice Dishes' ? 'selected' : '' }}>Rice Dishes</option>
-                            <option value="Noodle Dishes" {{ old('category', $dish->category) == 'Noodle Dishes' ? 'selected' : '' }}>Noodle Dishes</option>
-                            <option value="Soups & Curries" {{ old('category', $dish->category) == 'Soups & Curries' ? 'selected' : '' }}>Soups & Curries</option>
-                            <option value="Grilled & Stir-Fried Dishe" {{ old('category', $dish->category) == 'Grilled & Stir-Fried Dishe' ? 'selected' : '' }}>Grilled & Stir-Fried Dishe</option>
-                            <option value="Desserts & Snacks" {{ old('category', $dish->category) == 'Desserts & Snacks' ? 'selected' : '' }}>Desserts & Snacks</option>
+                            <option value="dish" {{ old('category', $dish->category) == 'dish' ? 'selected' : '' }}>Rice Dishes</option>
+                            <option value="rice-noodles" {{ old('category', $dish->category) == 'rice-noodles' ? 'selected' : '' }}>Noodle Dishes</option>
+                            <option value="soup" {{ old('category', $dish->category) == 'soup' ? 'selected' : '' }}>Soups & Curries</option>
+                            <option value="grilled" {{ old('category', $dish->category) == 'grilled' ? 'selected' : '' }}>Grilled & Stir-Fried Dishes</option>
+                            <option value="dessert" {{ old('category', $dish->category) == 'dessert' ? 'selected' : '' }}>Desserts & Snacks</option>
                         </select>
                         @error('category')
                             <span class="invalid-feedback" role="alert">
