@@ -1,11 +1,26 @@
-<h2 class="filter-heading text-uppercase mb-4 text-center">Explore Traditional Dishes</h2>
+<div class="category-nav border-bottom bg-body sticky-top px-4">
 
-<nav class="d-flex flex-wrap justify-content-center gap-5 mb-4">
+  <nav class="px-4 d-flex flex-nowrap align-items-center">
+    <a class="nav-link d-flex align-items-center gap-2" href="/all-food">
+      All dishes <span class="badge rounded-pill count-badge">117</span>
+    </a>
 
-  <a href="/all-food" class="btn filter-link  my-2">All</a>
-  <a href="/soups" class="btn  filter-link my-2">Soups & Curries</a>
-  <a href="/grilled" class="btn  filter-link my-2">Grilled & Stir-Fries</a>
-  <a href="/rice-noodles" class="btn filter-link my-2">Rice & Noodles</a>
-  <a href="/desserts" class="btn  filter-link my-2">Desserts & Snacks</a>
+    <a class="nav-link active d-flex align-items-center gap-2" href="/soups">
+      Soups & Curries <span class="badge rounded-pill count-badge">18</span>
+    </a>
+
+    <a class="nav-link d-flex align-items-center gap-2" href="/grilled">
+      Grilled & Stir-Fries <span class="badge rounded-pill count-badge">24</span>
+    </a>
+
+    <a class="nav-link d-flex align-items-center gap-2" href="/rice-noodles">
+      Rice & Noodles <span class="badge rounded-pill count-badge">31</span>
+    </a>
+
+    <a class="nav-link d-flex align-items-center gap-2" href="/desserts">
+      Desserts & Snacks <span class="badge rounded-pill count-badge">15</span>
+    </a>
+
+  </nav>
   
-</nav>
+</div>
