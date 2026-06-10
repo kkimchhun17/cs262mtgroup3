@@ -34,12 +34,14 @@ class FoodController extends Controller
             'category' => 'required',
             'image' => 'required',
             'difficulty' => 'required',
-            'duration' => 'required|integer'
+            'duration' => 'required|integer',
+            'rating' => 'nullable|integer|min:1|max:5'
         ]);
 
         $incomingFields['name'] = strip_tags($incomingFields['name']);
         $incomingFields['description'] = strip_tags($incomingFields['description']);
         $incomingFields['category'] = strip_tags($incomingFields['category']);
+        $incomingFields['rating'] = (int) $incomingFields['rating'];
 
         if ($request->hasFile('image')) {
             $path = $request->file('image')->store('food', 'public');
@@ -61,12 +63,14 @@ class FoodController extends Controller
             'category' => 'required',
             'image' => 'nullable',
             'difficulty' => 'required',
-            'duration' => 'required|integer'
+            'duration' => 'required|integer',
+            'rating' => 'nullable|integer|min:1|max:5'
         ]);
 
         $incomingFields['name'] = strip_tags($incomingFields['name']);
         $incomingFields['description'] = strip_tags($incomingFields['description']);
         $incomingFields['category'] = strip_tags($incomingFields['category']);
+        $incomingFields['rating'] = (int) $incomingFields['rating'];
 
         if ($request->hasFile('image')) {
             if ($food->image_url) {
