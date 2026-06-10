@@ -1,48 +1,36 @@
 @extends('layouts.app')
 @section('content')
-<main class="container">
+<main>
+   <div>
+    <!-- Page hero band -->
+    <div class="page-hero bg-ink text-white py-5 px-4 px-lg-5">
+      <div class="position-relative z-1" style="max-width: 600px;">
+        <div class="hero-eyebrow text-saffron text-uppercase small fw-medium mb-3" style="letter-spacing: 2px;">Explore the collection</div>
+        <h1 class="font-serif display-5 fw-semibold mb-3 lh-sm">All <em class="text-saffron fst-italic">Traditional</em> Dishes</h1>
+        <p class="text-white-50 small mb-4 lh-lg">Browse the full collection of authentic Khmer recipes — from fragrant soups to charcoal-grilled street food and sweet coconut desserts.</p>
+        <div class="d-flex gap-4 gap-md-5 mt-4">
+          <div>
+            <div class="font-serif fs-3 fw-semibold lh-1">117</div>
+            <div class="text-white-50 small mt-1" style="font-size: 12px; letter-spacing: 0.5px;">Total recipes</div>
+          </div>
+          <div>
+            <div class="font-serif fs-3 fw-semibold lh-1">5</div>
+            <div class="text-white-50 small mt-1" style="font-size: 12px; letter-spacing: 0.5px;">Categories</div>
+          </div>
+          <div>
+            <div class="font-serif fs-3 fw-semibold lh-1">43</div>
+            <div class="text-white-50 small mt-1" style="font-size: 12px; letter-spacing: 0.5px;">Contributors</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
     @include('layouts.nav-filter')
 
-    <div class="row">
-        @foreach($dishes as $dish)
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="card h-100 food-card shadow-sm position-relative">
-                <img src="{{ $dish->image_url ? asset('storage/' . $dish->image_url) : 'https://via.placeholder.com/400x300' }}" class="card-img-top" alt="{{ $dish->name }}">
-                <div class="card-body d-flex flex-column">
-                    <div class="text-warning mb-2 fs-6">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                    </div>
-                    
-                    <h5 class="card-title mb-1">{{ $dish->name }}</h5>
-                    <p class="text-muted small mb-2">Category: {{ $dish->category }}</p>
-                    <p class="card-text text-secondary mb-4" style="font-size: 0.95rem;">{{ $dish->description }}</p>
-                    
-                    <div class="mt-auto">
-                        <div class="d-flex justify-content-between align-items-center pt-3 border-top">
-                            <div class="text-muted small d-flex align-items-center">
-                                <i class="bi bi-clock me-2"></i> {{ $dish->duration }} min
-                            </div>
-                            <div class="small fw-bold">{{ $dish->difficulty }}</div>
-                        </div>
+    <div class=" text-muted small py-4 px-5">
+        Showing <strong class="text-dark"># recipes</strong> in #
+    </div>
 
-                        @auth
-                        <div class="d-flex gap-2 mt-3">
-                            <a href="/edit-dish/{{ $dish->id }}" class="btn btn-sm btn-outline-primary flex-grow-1">Edit</a>
-                            <form action="/delete-dish/{{ $dish->id }}" method="POST" class="flex-grow-1">
-                                @csrf
-                                <button type="submit" class="btn btn-sm btn-outline-danger w-100" onclick="return confirm('Delete this dish?')">Delete</button>
-                            </form>
-                        </div>
-                        @endauth
-                    </div>
-                </div>
-            </div>
-        </div>
-        @endforeach
-    </div> 
+    @include('layouts.dish-card')
 </main>
 @endsection

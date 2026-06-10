@@ -1,39 +1,40 @@
 @extends('layouts.app')
 @section('content')
-<main class="container">
-    @include('layouts.nav-filter')
-    <div class="row">
-        @foreach($dishes as $dish)
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="card h-100 food-card shadow-sm position-relative">
-                <img src="{{ $dish->image_url ? asset('storage/' . $dish->image_url) : 'https://via.placeholder.com/400x300' }}" class="card-img-top" alt="{{ $dish->name }}">
-                <div class="card-body d-flex flex-column">
-                    <div class="text-warning mb-2 fs-6">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+<main>
+    <div class="page-hero text-white py-5 px-4 px-lg-5" style="background:linear-gradient(135deg,#1C1410 60%,#3a1a08)">
+
+        <div class="position-relative z-1" style="max-width: 600px;">
+
+            <div class="hero-eyebrow text-saffron text-uppercase small fw-medium mb-3" style="letter-spacing: 2px;">Category</div>
+
+                <h1 class="font-serif display-5 fw-semibold mb-3 lh-sm"># &amp; <em class="text-saffron fst-italic">#</em></h1>
+                <p class="text-white-50 small mb-4 lh-lg">desc</p>
+
+                <div class="d-flex gap-4 gap-md-5 mt-4">
+                    <div>
+                        <div class="font-serif fs-3 fw-semibold lh-1">#</div>
+                        <div class="text-white-50 small mt-1" style="font-size: 12px; letter-spacing: 0.5px;">Recipes</div>
                     </div>
-                    <h5 class="card-title mb-1">{{ $dish->name }}</h5>
-                    <p class="card-text text-secondary mb-4" style="font-size: 0.95rem;">{{ $dish->description }}</p>
-                    <div class="mt-auto">
-                        <div class="d-flex justify-content-between align-items-center pt-3 border-top">
-                            <div class="text-muted small d-flex align-items-center">
-                                <i class="bi bi-clock me-2"></i> {{ $dish->duration }} min
-                            </div>
-                            <div class="small fw-bold">{{ $dish->difficulty }}</div>
-                        </div>
-                        @auth
-                        <div class="d-flex gap-2 mt-3">
-                            <a href="/edit-dish/{{ $dish->id }}" class="btn btn-sm btn-outline-primary flex-grow-1">Edit</a>
-                            <form action="/delete-dish/{{ $dish->id }}" method="POST" class="flex-grow-1">
-                                @csrf
-                                <button type="submit" class="btn btn-sm btn-outline-danger w-100" onclick="return confirm('Delete?')">Delete</button>
-                            </form>
-                        </div>
-                        @endauth
+
+                    <div>
+                        <div class="font-serif fs-3 fw-semibold lh-1"># min</div>
+                        <div class="text-white-50 small mt-1" style="font-size: 12px; letter-spacing: 0.5px;">Avg. cook time</div>
                     </div>
+
                 </div>
+
             </div>
+
         </div>
-        @endforeach
+
     </div>
+
+    @include('layouts.nav-filter')
+
+    <div class=" text-muted small py-4 px-5">
+        Showing <strong class="text-dark"># recipes</strong> in #
+    </div>
+
+    @include('layouts.dish-card')
 </main>
 @endsection
