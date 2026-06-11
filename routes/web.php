@@ -21,7 +21,7 @@ Route::post('/logout', [AuthController::class, 'logout']);
 Route::post('/register', [AuthController::class, 'register']);
 
 Route::get('/all-food', [FoodController::class, 'index']);
-Route::get('/dishes', [FoodController::class, 'index'])->defaults('category', 'dish');
+
 Route::get('/soups', [FoodController::class, 'index'])->defaults('category', 'soup');
 Route::get('/grilled', [FoodController::class, 'index'])->defaults('category', 'grilled');
 Route::get('/desserts', [FoodController::class, 'index'])->defaults('category', 'dessert');

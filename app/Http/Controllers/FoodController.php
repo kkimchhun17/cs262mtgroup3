@@ -16,15 +16,29 @@ class FoodController extends Controller
             $query->where('category', $category);
         }
         $dishes = $query->latest()->get();
+        $totalDishes = Food::count();
+        $totalCategories = 4;
+
+        $categoryCounts = [
+            'rice-noodles' => Food::where('category', 'rice-noodles')->count(),
+            'soup' => Food::where('category', 'soup')->count(),
+            'grilled' => Food::where('category', 'grilled')->count(),
+            'dessert' => Food::where('category', 'dessert')->count(),
+        ];
+    
         
         $view = 'pages.all-food';
-        if ($category == 'dish') $view = 'pages.dishes';
+        if ($category == 'rice-noodles') $view = 'pages.rice-noodles';
         if ($category == 'soup') $view = 'pages.soups';
         if ($category == 'grilled') $view = 'pages.grilled';
         if ($category == 'dessert') $view = 'pages.desserts';
-        if ($category == 'rice-noodles') $view = 'pages.rice-noodles';
 
-        return view($view, ['dishes' => $dishes]);
+        return view($view, [
+            'dishes' => $dishes,
+            'totalDishes' => $totalDishes,
+            'totalCategories' => $totalCategories,
+            'categoryCounts' => $categoryCounts
+        ]);
     }
 
     public function createDish(Request $request) {

@@ -8,22 +8,22 @@
 
         <a href="/soups"
            class="filter-tab {{ request()->is('soups') ? 'filter-active' : '' }}">
-            Soups &amp; Curries   
+            Soups &amp; Curries ({{ $categoryCounts['soup'] }})
         </a>
 
         <a href="/grilled"
            class="filter-tab {{ request()->is('grilled') ? 'filter-active' : '' }}">
-            Grilled &amp; Stir-Fries    
+            Grilled &amp; Stir-Fries ({{ $categoryCounts['grilled'] }})
         </a>
 
         <a href="/rice-noodles"
            class="filter-tab {{ request()->is('rice-noodles') ? 'filter-active' : '' }}">
-            Rice &amp; Noodles    
+            Rice &amp; Noodles ({{ $categoryCounts['rice-noodles'] }})
         </a>
 
         <a href="/desserts"
            class="filter-tab {{ request()->is('desserts') ? 'filter-active' : '' }}">
-            Desserts &amp; Snacks    
+            Desserts &amp; Snacks ({{ $categoryCounts['dessert'] }})
         </a>
 
     </div>
