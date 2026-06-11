@@ -18,7 +18,6 @@
                         <i class="bi bi-star"></i>
                         @endif
                         @endfor
-                        <span class="text-muted small ms-1">{{ $dish->rating }}</span>
                 </div>
 
                 <h5 class="card-title my-2">{{ $dish->name }}</h5>
