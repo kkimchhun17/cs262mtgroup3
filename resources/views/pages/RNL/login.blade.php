@@ -12,7 +12,7 @@
                     <input type="text" placeholder="eg.chary" class="form-control @error('loginname') is-invalid @enderror" id="loginname" name="loginname" required>
                     @error('loginname')
                         <span class="invalid" role="alert">
-                            <strong class="text-danger">Nope</strong>
+                            <strong class="text-danger fs-6">username or password is incorrect</strong>
                     </span>
                     @enderror
                 </div>
