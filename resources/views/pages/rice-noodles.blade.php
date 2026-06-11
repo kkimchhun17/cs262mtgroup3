@@ -7,21 +7,9 @@
 
             <div class="hero-eyebrow text-saffron text-uppercase small fw-medium mb-3" style="letter-spacing: 2px;">Category</div>
 
-                <h1 class="font-serif display-5 fw-semibold mb-3 lh-sm"># &amp; <em class="text-saffron fst-italic">#</em></h1>
-                <p class="text-white-50 small mb-4 lh-lg">desc</p>
-
-                <div class="d-flex gap-4 gap-md-5 mt-4">
-                    <div>
-                        <div class="font-serif fs-3 fw-semibold lh-1">#</div>
-                        <div class="text-white-50 small mt-1" style="font-size: 12px; letter-spacing: 0.5px;">Recipes</div>
-                    </div>
-
-                    <div>
-                        <div class="font-serif fs-3 fw-semibold lh-1"># min</div>
-                        <div class="text-white-50 small mt-1" style="font-size: 12px; letter-spacing: 0.5px;">Avg. cook time</div>
-                    </div>
-
-                </div>
+                <h1 class="font-serif display-5 fw-semibold mb-3 lh-sm">Rice &amp; <em class="text-saffron fst-italic">Noodles</em></h1>
+                <p class="text-white-50 small mb-4 lh-lg">The heart of every Khmer meal. Whether it's broken rice at dawn 
+                    or silky noodles in a fragrant broth, comfort starts here.</p>
 
             </div>
 
@@ -30,10 +18,6 @@
     </div>
 
     @include('layouts.nav-filter')
-
-    <div class=" text-muted small py-4 px-5">
-        Showing <strong class="text-dark"># recipes</strong> in #
-    </div>
 
     @include('layouts.dish-card')
 </main>
