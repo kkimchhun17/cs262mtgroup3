@@ -162,7 +162,7 @@
 
             <div class="pt-4 pb-0 d-flex justify-content-center">
                <div class="team-avatar-wrap">
-                  <img src="./asset/img/.jpeg" class="team-avatar-img" alt="vichey">
+                  <img src="./asset/img/vichey.jpeg" class="team-avatar-img" alt="vichey">
                </div>
 
             </div>
