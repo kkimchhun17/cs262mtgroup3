@@ -178,14 +178,21 @@
       
       <div class="position-relative z-1">
         <h2 class="font-serif display-6 fw-semibold mb-3 lh-sm">Have a recipe to share?</h2>
+        @auth
+        <p class="mb-0 text-white-50" style="max-width: 480px;">Welcome back! Jump straight to the dashboard and add your dish to the collection.</p>
+        @else
         <p class="mb-0 text-white-50" style="max-width: 480px;">Create a free account and add your own Khmer dishes to the collection. Every contribution keeps the tradition alive.</p>
+        @endauth
       </div>
 
-      <a href="#" class="btn btn-light rounded-pill px-5 py-3 text-terra fw-medium text-nowrap position-relative z-1 shadow-sm">Start sharing</a>
-   
+      @auth
+      <a href="/dashboard" class="btn btn-light rounded-pill px-5 py-3 text-terra fw-medium text-nowrap position-relative z-1 shadow-sm">Add a dish</a>
+      @else
+      <a href="/register" class="btn btn-light rounded-pill px-5 py-3 text-terra fw-medium text-nowrap position-relative z-1 shadow-sm">Start sharing</a>
+      @endauth
+
    </div>
 </div>
-
 
 
 @endsection
