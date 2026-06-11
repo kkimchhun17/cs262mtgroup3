@@ -1,26 +1,30 @@
-<div class="category-nav border-bottom bg-body sticky-top px-4">
+<div class="nav-filter-wrap">
+    <div class="nav-filter">
 
-  <nav class="px-4 d-flex flex-nowrap align-items-center">
-    <a class="nav-link d-flex align-items-center gap-2" href="/all-food">
-      All dishes <span class="badge rounded-pill count-badge">117</span>
-    </a>
+        <a href="/all-food"
+           class="filter-tab {{ request()->is('all-food') ? 'filter-active' : '' }}">
+            All dishes
+        </a>
 
-    <a class="nav-link active d-flex align-items-center gap-2" href="/soups">
-      Soups & Curries <span class="badge rounded-pill count-badge">18</span>
-    </a>
+        <a href="/soups"
+           class="filter-tab {{ request()->is('soups') ? 'filter-active' : '' }}">
+            Soups &amp; Curries   
+        </a>
 
-    <a class="nav-link d-flex align-items-center gap-2" href="/grilled">
-      Grilled & Stir-Fries <span class="badge rounded-pill count-badge">24</span>
-    </a>
+        <a href="/grilled"
+           class="filter-tab {{ request()->is('grilled') ? 'filter-active' : '' }}">
+            Grilled &amp; Stir-Fries    
+        </a>
 
-    <a class="nav-link d-flex align-items-center gap-2" href="/rice-noodles">
-      Rice & Noodles <span class="badge rounded-pill count-badge">31</span>
-    </a>
+        <a href="/rice-noodles"
+           class="filter-tab {{ request()->is('rice-noodles') ? 'filter-active' : '' }}">
+            Rice &amp; Noodles    
+        </a>
 
-    <a class="nav-link d-flex align-items-center gap-2" href="/desserts">
-      Desserts & Snacks <span class="badge rounded-pill count-badge">15</span>
-    </a>
+        <a href="/desserts"
+           class="filter-tab {{ request()->is('desserts') ? 'filter-active' : '' }}">
+            Desserts &amp; Snacks    
+        </a>
 
-  </nav>
-  
+    </div>
 </div>

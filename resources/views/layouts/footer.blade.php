@@ -35,6 +35,17 @@
                     <i class="bi bi-geo-alt-fill mt-1"></i>
                     <span>Phnom Penh, Cambodia</span>
                 </li>
+
+                <li class="d-flex align-items-start gap-2">
+                    <i class="bi bi-envelope-at-fill mt-1"></i>
+                    <span>Krorya@gmail.com</span>
+                </li>
+
+                <li class="d-flex align-items-start gap-2">
+                    <i class="bi bi-telephone-fill mt-1"></i>
+                    <span>+855 011 234 345</span>
+                </li>
+
             </ul>
         </div>
 

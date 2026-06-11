@@ -2,9 +2,9 @@
 @section('content')
 
 <section class="container-fluid px-4 px-lg-5 py-5 min-vh-100 d-flex align-items-center">
-   <div class="row w-100 align-items-center g-5">
-      <div class="col-lg-6 pe-lg-5">
-        <div class="hero-eyebrow text-terra small fw-medium text-uppercase letter-spacing mb-4">Authentic Khmer Cuisine</div>
+  <div class="row w-100 align-items-center g-5">
+    <div class="col-lg-6 pe-lg-5">
+      <div class="hero-eyebrow text-terra small fw-medium text-uppercase letter-spacing mb-4">Authentic Khmer Cuisine</div>
         <h1 class="font-serif display-3 fw-semibold mb-4 lh-sm text-dark">
           Discover the<br>flavors of<br>
           <em class="text-terra">Cambodia
@@ -16,24 +16,128 @@
         <p class="text-muted-custom fs-6 mb-5" style="max-width: 420px;">Explore recipes passed down through generations — or share your own Khmer creations with a community that loves food as much as you do.</p>
         <div class="d-flex gap-3 align-items-center flex-wrap">
           <a href="/all-food" class="btn btn-filled rounded-pill px-4 py-3 fw-medium text-light">Browse recipes</a>
-          <a href="#" class="text-dark text-decoration-none fw-medium ms-2">Share yours <span class="fs-5 ms-1">→</span></a>
         </div>
-      </div>
+    </div>
 
-      <div class="col-lg-6 position-relative d-flex justify-content-lg-end mt-5 mt-lg-0">
-         <img src="#" alt="img" class="hero-img-wrap w-100 shadow" style="max-width: 520px;">
-      </div>
+    <div class="col-lg-6 position-relative d-flex justify-content-lg-end mt-5 mt-lg-0">
+      <img src="./asset/img/hero-img.png" alt="img" class="hero-img-wrap w-100 shadow" style="max-width: 520px;">
+    </div>
 
-   </div>
+  </div>
 </section>
 
 <section class="container-fluid px-4 px-lg-5 py-5 my-4">
-   <div class="d-flex justify-content-between align-items-end mb-5">
-   <h2 class="font-serif display-6 fw-semibold text-dark mb-0 lh-sm">Recipes the community<br><span class="text-terra fst-italic">loves most</span></h2>
-   <a href="/all-food" class="text-terra text-decoration-none fw-medium small d-none d-md-block">See all recipes →</a>
-   </div>
+  <div class="d-flex justify-content-between align-items-end mb-5">
+    <h2 class="font-serif display-6 fw-semibold text-dark mb-0 lh-sm">Recipes the community<br><span class="text-terra fst-italic">loves most</span></h2>
+    <a href="/all-food" class="text-terra text-decoration-none fw-medium small d-none d-md-block">See all recipes →</a>
+  </div>
 
-     
+  <div class="row">
+
+    <div class="col-12 col-md-6 col-lg-4 mb-4 ">
+      <div class="card dish-card shadow-sm position-relative h-100">
+        <img src="https://grantourismotravels.com/wp-content/uploads/2021/02/Authentic-Nom-Banh-Chok-Recipe-Cambodian-Khmer-Noodles-Copyright-2022-Terence-Carter-Grantourismo-T.jpg"
+          class="card-img-top" alt="img">
+
+          <div class="card-body d-flex flex-column">
+          <!-- rating stars -->
+          <div class="text-warning mb-2 fs-6">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> 
+            <i class="bi bi-star"></i>
+          </div>
+
+          <h5 class="card-title my-2">Nom Banh Chok</h5>
+          <p class="card-text text-secondary my-2" style="font-size: 0.95rem;">Nom banh chok (simply “Khmer noodles”) comprises a fish curry served over a bed of fresh rice noodles, wild herbs, and vegetables. The curry broth is rich, with a delicate balance between sweetness and umami, and a distinct citrusy flavor that’s so prevalent in Cambodian cuisine.</p>
+
+          <div class="mt-auto">
+            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+              <div class="text-muted small d-flex align-items-center">
+                <i class="bi bi-clock me-2"></i> 30 min
+              </div>
+              <div class="small fw-bold">Medium</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4 mb-4 ">
+      <div class="card dish-card shadow-sm position-relative h-100">
+        <img src="https://lostplate.com/wp-content/uploads/2020/11/Cambodian-Pork-Rice-Recipe-Plate.jpg"
+          class="card-img-top" alt="img">
+
+          <div class="card-body d-flex flex-column">
+          <!-- rating stars -->
+          <div class="text-warning mb-2 fs-6">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> 
+            <i class="bi bi-star"></i>
+          </div>
+
+          <h5 class="card-title my-2">Cambodian Pork & Rice</h5>
+          <p class="card-text text-secondary my-2" style="font-size: 0.95rem;">Cambodian Pork and Rice consists of thin pork strips that have marinated overnight, grilled and served with steamed rice and a quick pickle of carrot and daikon. It makes one of Cambodia’s most popular breakfasts, along with the noodle soup kuy teav and nom banh chok.</p>
+
+          <div class="mt-auto">
+            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+              <div class="text-muted small d-flex align-items-center">
+                <i class="bi bi-clock me-2"></i>25 min
+              </div>
+              <div class="small fw-bold">Easy</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4 mb-4 ">
+      <div class="card  dish-card shadow-sm position-relative h-100">
+        <img src="https://d122axpxm39woi.cloudfront.net/images/guides/origin/63e8cc0bf2017.png"
+          class="card-img-top" alt="img">
+
+          <div class="card-body d-flex flex-column">
+          <!-- rating stars -->
+          <div class="text-warning mb-2 fs-6">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i> 
+            <i class="bi bi-star"></i>
+          </div>
+
+          <h5 class="card-title my-2">Sang Khya L'peouv</h5>
+          <p class="card-text text-secondary my-2" style="font-size: 0.95rem;">Sang Khya L'peouv is hollow pumpkins filled with delicious coconut custard that Cambodians often use for dessert after each meal.
+             Each piece reveals a creamy yellow custard that contrasts beautifully with the orange pumpkin flesh when the pumpkin is cut.</p>
+
+          <div class="mt-auto">
+            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+              <div class="text-muted small d-flex align-items-center">
+                <i class="bi bi-clock me-2"></i>40 min
+              </div>
+              <div class="small fw-bold">Medium</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
 </section>
 
 <section class="bg-ink text-white py-5">

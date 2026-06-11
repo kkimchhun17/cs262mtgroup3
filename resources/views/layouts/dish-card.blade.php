@@ -1,4 +1,4 @@
-<div class="row px-5">
+<div class="row px-5 py-5">
 
     @foreach($dishes as $dish)
     <div class="col-12 col-md-6 col-lg-4 mb-4">
@@ -6,7 +6,7 @@
         <div class="card h-100 dish-card shadow-sm position-relative">
 
             <img src="{{ $dish->image_url ? asset('storage/' . $dish->image_url) : 'https://via.placeholder.com/400x300' }}"
-                class="card-img-top h-100" alt="{{ $dish->name }}">
+                class="card-img-top" alt="{{ $dish->name }}">
 
             <div class="card-body d-flex flex-column">
 
@@ -21,8 +21,8 @@
                         <span class="text-muted small ms-1">{{ $dish->rating }}</span>
                 </div>
 
-                <h5 class="card-title mb-1">{{ $dish->name }}</h5>
-                <p class="card-text text-secondary mb-4" style="font-size: 0.95rem;">{{ $dish->description }}</p>
+                <h5 class="card-title my-2">{{ $dish->name }}</h5>
+                <p class="card-text text-secondary  my-2" style="font-size: 0.95rem;">{{ $dish->description }}</p>
 
                 <div class="mt-auto">
                     <div class="d-flex justify-content-between align-items-center pt-3 border-top">
